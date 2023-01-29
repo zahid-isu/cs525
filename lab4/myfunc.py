@@ -40,15 +40,15 @@ def exp(x, kmax=100):
     x0= int(round(x))
     z=x-x0
     expx0= math.pow(e,x0)
-    s=0
+    s=1.0
 
-    for k in range (kmax):
+    for k in range (1,kmax): #updated loop
 
-        
+        sold=s
         s += (math.pow(z,k)/math.factorial(k))
 
 
-        if abs((math.pow(z,k)/math.factorial(k))< 1e-14): # if the term is too small, then break
+        if abs((s-sold)/x)< 1e-14: # if the term is too small, then break
             break
 
     return expx0*s
