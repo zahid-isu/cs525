@@ -1,0 +1,13 @@
+The input array is: 
+arrx[0]= 0.200000 
+arrx[1]= 1.200000 
+arrx[2]= 2.200000 
+arrx[3]= 3.600000 
+arrx[4]= 4.600000 
+
+ Exponential of the array is: 
+exp(arrx[0]) = exp(0.200000) = 1.221403
+exp(arrx[1]) = exp(1.200000) = 3.320117
+exp(arrx[2]) = exp(2.200000) = 9.025013
+exp(arrx[3]) = exp(3.600000) = 32.758890
+exp(arrx[4]) = exp(4.600000) = 89.047895
