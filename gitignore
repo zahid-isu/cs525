@@ -1,0 +1,15 @@
+# ignore all logs
+*.log
+
+
+# ignore all logs
+*.o
+
+
+# ignore all logs
+*.exe
+
+# ignore all logs
+*.DS_Store
+
+
