@@ -1,5 +1,6 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -g
+FFLAGS = -O3 -Wall
+LFFLAG =
 OBJECTS = main.o \
 GetNumberOfNodes.o \
 GenerateList.o \
