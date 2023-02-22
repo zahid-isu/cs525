@@ -7,7 +7,7 @@ int main()
 node* head = NULL;
 
 // Set number of nodes and generate a new list
-const int num_nodes = GetNumberOfNodes();
+const int num_nodes = 10;
 GenerateList(&head,num_nodes);
 
 // Print list to screen
