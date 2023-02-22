@@ -1,15 +1,7 @@
-# ignore all logs
-*.log
+#*.o
 
+#*.log
 
-# ignore all logs
-*.o
+#*.DS_Store
 
-
-# ignore all logs
-*.exe
-
-# ignore all logs
-*.DS_Store
-
-
+#*.exe

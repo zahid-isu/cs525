@@ -1,0 +1,13 @@
+# ignore ALL .log files
+*.log
+
+
+# ignore ALL .o files
+*.o
+
+
+# ignore ALL .exe files
+*.exe
+
+# ignore ALL .exe files
+*.DS_Store
