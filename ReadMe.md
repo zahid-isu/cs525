@@ -1,1 +1,3 @@
-### This repo is for COMS525 class (Spring 2023)
+# COMS525 class (Spring 2023)
+
+## Lab assignment codes
