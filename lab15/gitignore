@@ -1,2 +1,7 @@
-# ignire .o files
-*.o
+#*.o
+
+#*.log
+
+#*.DS_Store
+
+#*.exe
