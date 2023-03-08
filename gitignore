@@ -1,7 +1,6 @@
-#*.o
+# ignore following files
 
-#*.log
-
-#*.DS_Store
-
-#*.exe
+*.o
+*.log
+*.DS_Store
+*.exe
