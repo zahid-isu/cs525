@@ -1,0 +1,28 @@
+I am in the **main** function.
+I am in the **compute_area** function.
+I am in the **compute_perimeter** function.
+
+ The coordinates of the 4 nodes are:
+ node #1: (  1.00000e+00,  0.00000e+00 )
+ node #2: (  2.00000e+00,  2.00000e+00 )
+ node #3: (  0.00000e+00,  2.00000e+00 )
+ node #4: (  0.00000e+00,  0.00000e+00 )
+
+ The area of quadrilateral =  3.07768e+00
+
+ The perimeter of quadrilateral =  7.23607e+00
+
+I am in the **main** function.
+I am in the **compute_area** function.
+I am in the **compute_perimeter** function.
+
+ The coordinates of the 4 nodes are:
+ node #1: (  1.00000e+00,  0.00000e+00 )
+ node #2: (  1.00000e+00,  2.00000e+00 )
+ node #3: ( -1.00000e+00,  3.00000e+00 )
+ node #4: ( -1.00000e+00,  0.00000e+00 )
+
+ The area of quadrilateral =  5.13969e+00
+
+ The perimeter of quadrilateral =  9.23607e+00
+

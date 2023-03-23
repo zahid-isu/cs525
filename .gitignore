@@ -1,0 +1,7 @@
+*.sh
+*.o
+*.out
+*.exe
+*.zip
+*.DS_Store
+*lab17
