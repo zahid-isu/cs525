@@ -1,0 +1,39 @@
+Submitted batch job 8601
+
+ N = 100000 K = 200
+ With 1 threads , clock_time = 1.22558e-01 (sec)
+ 1-norm of w = 5.46125e+01 
+ N = 100000 K = 200
+ With 2 threads , clock_time = 1.09843e-01 (sec)
+ 1-norm of w = 5.46125e+01 
+ N = 100000 K = 200
+ With 4 threads , clock_time = 7.63032e-02 (sec)
+ 1-norm of w = 5.46125e+01 
+ N = 100000 K = 200
+ With 6 threads , clock_time = 6.00641e-02 (sec)
+ 1-norm of w = 5.46125e+01 
+ N = 100000 K = 200
+ With 8 threads , clock_time = 5.72307e-02 (sec)
+ 1-norm of w = 5.46125e+01 
+
+
+
+
+Submitted batch job 8602
+
+ N = 100000 K = 2000
+ With 1 threads , clock_time = 1.56208e+01 (sec)
+ 1-norm of w = 6.62768e+01 
+ N = 100000 K = 2000
+ With 2 threads , clock_time = 1.38137e+01 (sec)
+ 1-norm of w = 6.62768e+01 
+ N = 100000 K = 2000
+ With 4 threads , clock_time = 7.11814e+00 (sec)
+ 1-norm of w = 6.62768e+01 
+ N = 100000 K = 2000
+ With 6 threads , clock_time = 7.08208e+00 (sec)
+ 1-norm of w = 6.62768e+01 
+ N = 100000 K = 2000
+ With 8 threads , clock_time = 6.49482e+00 (sec)
+ 1-norm of w = 6.62768e+01 
+
