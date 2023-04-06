@@ -1,0 +1,22 @@
+Submitted batch job 8715
+
+============ usung processor 0 to calculate the norm of the vector v =========== 
+export TMPDIR=/tmp/zahid/8715
+export TMOUT=5400
+NP =  2, N = 4, norm_squared =  4.0000000000000e+00, norm =  2.0000000000000e+00
+ Elapsed time =  6.1702728271484e-04
+v[1] =  5.0000000000000e-01, v[N] =  5.0000000000000e-01
+
+
+
+============ usung local processor to calculate the norm of the vector v ===========
+Submitted batch job 8723
+
+export TMPDIR=/tmp/zahid/8723
+export TMOUT=5400
+NP =  2, N = 4, norm_squared =  4.0000000000000e+00, norm =  2.0000000000000e+00
+
+Elapsed time =  3.4332275390625e-05
+
+First element v[1] =  5.0000000000000e-01, Last element v[N] =  5.0000000000000e-01
+
