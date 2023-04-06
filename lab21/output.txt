@@ -1,0 +1,16 @@
+Submitted batch job 8715
+
+export TMPDIR=/tmp/zahid/8715
+export TMOUT=5400
+NP =  2, N = 4, norm_squared =  4.0000000000000e+00, norm =  2.0000000000000e+00
+ Elapsed time =  6.1702728271484e-04
+v[1] =  5.0000000000000e-01, v[N] =  5.0000000000000e-01
+
+
+Submitted batch job 8716
+
+export TMPDIR=/tmp/zahid/8716
+export TMOUT=5400
+NP =  2, N = 16, norm_squared =  1.3600000000000e+02, norm =  1.1661903789691e+01
+ Elapsed time =  4.0054321289062e-05
+v[1] =  0.0000000000000e+00, v[N] =  8.5749292571254e-02
