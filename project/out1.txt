@@ -1,0 +1,31 @@
+mpiexec -n 1 python tree.py>out1.txt
+
+Shortest path: (0, 2, 1, 7, 4, 6, 3, 5, 0)
+Shortest distance: 2.7668857663241644
+Time taken: 179.0731 ms
+
+mpiexec -n 2 python tree.py>out1.txt
+
+Shortest path: (0, 4, 1, 3, 6, 5, 2, 7, 0)
+Shortest distance: 2.5327090727446038
+Time taken: 90.4870 ms
+
+
+mpiexec -n 4 python tree.py>out1.txt
+
+Shortest path: (0, 1, 3, 4, 7, 6, 2, 5, 0)
+Shortest distance: 2.50208750294509
+Time taken: 49.3175 ms
+
+mpiexec -n 8 python tree.py>out1.txt
+
+Shortest path: (0, 1, 4, 7, 2, 6, 3, 5, 0)
+Shortest distance: 2.164207040211615
+Time taken: 28.6065 ms
+
+
+mpiexec -n 16 python tree.py>out1.txt
+
+Shortest path: (0, 1, 2, 7, 5, 3, 4, 6, 0)
+Shortest distance: 2.1525886458154253
+Time taken: 17.9612 ms
