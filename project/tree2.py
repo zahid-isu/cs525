@@ -5,6 +5,23 @@ from itertools import permutations
 from math import dist
 import numpy as np
 
+""" This script implements the dynamic tree search using MPI library of python for parallel computing.
+    Documentation used for this code: https://mpi4py.readthedocs.io/en/stable/
+    The inputs are the number of cities (n) and randomly generated coordinates of the cities.
+    The outputs are the shortest path and the time taken (ms) to find the shortest path.
+    The process0 (root node) chunks the data to other process and at the end collect the results from other processes.
+    Also, it shows individual time taken by each processor.
+
+    To run this script, use the following command at MPI terminal:
+    mpiexec -n 4 python tree2.py
+
+    The number of processes can be changed by changing the value of -n 
+    The -n values I tried: [1,2,4,8,16]
+    Note that every run will give different results because the cities are randomly generated.
+
+"""
+
+
 # def distance(path, cities):
 #     return sum(dist(cities[path[i - 1]], cities[path[i]]) for i in range(len(cities)))
 def distance(path, cities):
@@ -63,7 +80,7 @@ def main():
         max_time = max(time_taken for _, _, _, time_taken in results)
         print(f"Total time taken: {1000*max_time:.5f} ms")
 
-        for i, (_, _, _, time_taken) in enumerate(results):
+        for i, (_, _, _, time_taken) in enumerate(results): # print each processor time
             print(f"Process {i} time: {1000*time_taken:.5f} ms")
 
 if __name__ == "__main__":

@@ -2,7 +2,20 @@ import numpy as np
 from mpi4py import MPI
 from itertools import permutations
 
-"""Static tree search"""
+""" This script implements the static tree search using MPI library of python for parallel computing.
+    Documentation used for this code: https://mpi4py.readthedocs.io/en/stable/
+    The inputs are the number of cities (n) and randomly generated coordinates of the cities.
+    The outputs are the shortest path and the time taken (ms) to find the shortest path.
+    The process0 (root node) chunks the data to other process and at the end collect the results from other processes.
+
+    To run this script, use the following command at MPI terminal:
+    mpiexec -n 4 python tree.py
+
+    The number of processes can be changed by changing the value of -n 
+    The -n values I tried: [1,2,4,8,16]
+
+    Note that every run will give different results because the cities are randomly generated.
+"""
 
 # Function to calculate the distance between two cities
 def distance(city1, city2):
@@ -27,28 +40,33 @@ def split_data(data, num_chunks):
 # Function to perform a tree search for the shortest path
 def tree_search(cities):
     comm = MPI.COMM_WORLD
-    rank = comm.Get_rank()
-    size = comm.Get_size()
+    rank = comm.Get_rank() #rank of the process
+    size = comm.Get_size() #number of processes
 
     if rank == 0:
         paths = list(permutations(range(1, len(cities))))
         paths = [tuple([0] + list(path) + [0]) for path in paths]
+        # print("List paths:", paths) #List of tuples (all possible paths)
+        print("Number of paths:", len(paths)) #Number of paths
+        print("Number of processes:", size)
         chunks = split_data(paths, size)
     else:
         chunks = None
 
-    local_paths = comm.scatter(chunks, root=0)
+    local_paths = comm.scatter(chunks, root=0) # distribute chunks to all other processes
+    print("Rank:", rank, "Local paths:", local_paths)
     local_shortest_distance = float('inf')
     local_shortest_path = None
 
     for path in local_paths:
-        dist = path_distance(path, cities)
+        dist = path_distance(path, cities) 
         if dist < local_shortest_distance:
             local_shortest_distance = dist
             local_shortest_path = path
 
-    shortest_distance = comm.allreduce(local_shortest_distance, op=MPI.MIN)
-    shortest_path = comm.bcast(local_shortest_path, root=0)
+    shortest_distance = comm.allreduce(local_shortest_distance, op=MPI.MIN) # reduce dist accross all processes, 
+                                                                            # the result is returned to all processes
+    shortest_path = comm.bcast(local_shortest_path, root=0) # root process broadcasts the shortest path to all processes
 
     return shortest_path, shortest_distance
 
